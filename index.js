@@ -21,13 +21,13 @@ async function getBitcoinPrice() {
 
 async function sendToDiscord(price) {
     if (!WEBHOOK_URL) {
-        console.error("[ERROR] service=btc-bot Webhook URL is missing! Укажите переменную окружения.");
+        console.error("[ERROR] service=btc-bot Webhook URL is missing! Define variable.");
         return;
     }
 
     // Формируем сообщение
     const msg = {
-        content: `📈 **Биткоин-радар (Ида-Вирумаа)**\nТекущий курс: **${price} EUR**`
+        content: `📈 **Bitcoin radar for Estonia**\nCurrent course: **${price} EUR**`
     };
 
     try {
